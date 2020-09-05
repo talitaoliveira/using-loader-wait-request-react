@@ -1,10 +1,11 @@
 import React from 'react';
 import Loader from './components/Loader';
 
-function App() {
+const App = () => {
   return (
-    <div class="app">
+    <div className="app">
       <Loader/>
+      <button>call API</button>
     </div>
   );
 }
