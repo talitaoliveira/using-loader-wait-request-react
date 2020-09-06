@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Loader from './components/Loader/Loader'
+import UserData from './components/UserData/UserData'
 
 import './App.css';
 
@@ -7,6 +8,8 @@ const App = () => {
   const [showLoader, setShowLoader] = useState(false)
   const [username, setUsername] = useState('')
   const [hasError, setHasError] = useState(false)
+  const [userData, setUserData] = useState({})
+
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -14,12 +17,17 @@ const App = () => {
     fetch(`https://api.github.com/users/${username}`)
         .then(res => res.json())
         .then(data => {
+          setUserData(data)
           setShowLoader(false)
         })
         .catch((err) => {
           setHasError('Ooops... Deu alguma merda.')
           setShowLoader(false)
         })
+  }
+
+  const isObjectEmpty = (myObject) => {
+    return Object.entries(myObject).length > 0
   }
 
   return (
@@ -31,6 +39,7 @@ const App = () => {
       </form>
       {showLoader && <Loader/>}
       {hasError && <p data-testid="error-message">{hasError}</p>}
+      {isObjectEmpty(userData) && <UserData data={userData} />}
     </div>
   );
 }
