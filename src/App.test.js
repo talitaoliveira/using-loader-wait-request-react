@@ -7,4 +7,9 @@ describe('Page', () => {
     render(<App />)
     expect(screen.getByRole('button', {name: /call API/i})).toBeInTheDocument()
   })
+
+  it('should exist an input to put the github user', () => {
+    render(<App />)
+    expect(screen.getByRole('textbox', {name: /github user/i})).toBeInTheDocument()
+  })
 })
