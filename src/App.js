@@ -9,6 +9,13 @@ const App = () => {
   const handleForm = (e) => {
     e.preventDefault();
     setShowLoader(true)
+    fetch("https://api.github.com/users/talitaoliveira")
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          setShowLoader(false)
+        })
+        .catch((err) => console.log(err))
   }
 
   return (
