@@ -15,7 +15,6 @@ describe('Page', () => {
 
   it('should not appear the loader without click the button"', async () => {
     render(<App />)
-
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
   })
 })
