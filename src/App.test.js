@@ -11,7 +11,7 @@ describe('Page', () => {
 
   it('should exist an input to put the github user', () => {
     render(<App />)
-    expect(screen.getByRole('textbox', {name: /github user/i})).toBeInTheDocument()
+    expect(screen.getByRole('textbox', {name: /Digite seu usuário do Github/i})).toBeInTheDocument()
   })
 
   it('should not appear the loader without click the button"', async () => {
