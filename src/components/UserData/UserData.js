@@ -1,27 +1,27 @@
 import React from 'react';
 import './UserData.css';
 
-const UserData = (userData = {}) => {
+const UserData = ({data}) => {
     return (
         <div className="user-data">
-        <img src={userData.avatar_url} alt={userData.name}/>
+        <img src={data.avatar_url} alt={data.name}/>
         <table>
           <tbody>
             <tr>
               <td><strong>Name:</strong></td>
-              <td>{userData.name}</td>
+              <td>{data.name}</td>
             </tr>
             <tr>
               <td><strong>Localização:</strong></td>
-              <td>{userData.location}</td>
+              <td>{data.location}</td>
             </tr>
             <tr>
               <td><strong>Bio:</strong></td>
-              <td>{userData.bio}</td>
+              <td>{data.bio}</td>
             </tr>
             <tr>
               <td><strong>Perfil criado em:</strong></td>
-              <td>{userData.created_at}</td>
+              <td>{data.created_at}</td>
             </tr>
           </tbody>
         </table>
