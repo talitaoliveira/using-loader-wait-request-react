@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
 import App from './App';
 
 describe('Page', () => {
@@ -17,4 +18,11 @@ describe('Page', () => {
     render(<App />)
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
   })
+
+  it('should appear the loader when click the button"', async () => {
+    render(<App />)
+    userEvent.click(screen.getByRole('button', {name: /call API/i}))
+    expect(screen.getByRole('alert')).toBeInTheDocument()
+  })
+  
 })
