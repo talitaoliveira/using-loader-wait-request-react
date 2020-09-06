@@ -13,10 +13,10 @@ const App = () => {
 
   return (
     <div className="app">
-      <form onSubmit={handleForm}>
-        <label htmlFor="github-user">Digite seu usuário do Github:</label>
-        <input type="text" id="github-user"/>
-        <button type="submit">call API</button>
+      <form onSubmit={handleForm} className="form-github-user">
+        <label htmlFor="github-user" className="label-github-user">Digite seu usuário do Github:</label>
+        <input type="text" id="github-user" className="input-github-user"/>
+        <button type="submit" className="btn-submit">Enviar</button>
       </form>
       {showLoader && <Loader/>}
     </div>

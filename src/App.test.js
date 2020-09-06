@@ -4,9 +4,9 @@ import userEvent from '@testing-library/user-event'
 import App from './App';
 
 describe('Page', () => {
-  it('should exist a button with name "call API"', () => {
+  it('should exist a button with name "enviar"', () => {
     render(<App />)
-    expect(screen.getByRole('button', {name: /call API/i})).toBeInTheDocument()
+    expect(screen.getByRole('button', {name: /enviar/i})).toBeInTheDocument()
   })
 
   it('should exist an input to put the github user', () => {
@@ -21,7 +21,7 @@ describe('Page', () => {
 
   it('should appear the loader when click the button"', async () => {
     render(<App />)
-    userEvent.click(screen.getByRole('button', {name: /call API/i}))
+    userEvent.click(screen.getByRole('button', {name: /enviar/i}))
     expect(screen.getByRole('alert')).toBeInTheDocument()
   })
   
