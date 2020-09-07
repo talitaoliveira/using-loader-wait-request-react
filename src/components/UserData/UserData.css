@@ -1,3 +1,33 @@
-.user-data {
+.user-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: 5px solid #eee;
+    box-sizing: border-box;
+}
 
+.user-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    align-self: center;
+}
+
+.user-data {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.user-data-title {
+    width: 30%;
+    text-align: left;
+    padding: .5rem;
+
+}
+
+.rows:nth-child(odd){
+    background-color: #eee;
 }
