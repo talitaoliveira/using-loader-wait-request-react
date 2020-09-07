@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/using-loader-wait-request-react/static/css/main.91ab2300.chunk.css",
+    "main.js": "/using-loader-wait-request-react/static/js/main.1f7cf521.chunk.js",
+    "main.js.map": "/using-loader-wait-request-react/static/js/main.1f7cf521.chunk.js.map",
+    "runtime-main.js": "/using-loader-wait-request-react/static/js/runtime-main.f85fbe6f.js",
+    "runtime-main.js.map": "/using-loader-wait-request-react/static/js/runtime-main.f85fbe6f.js.map",
+    "static/js/2.063b9ebd.chunk.js": "/using-loader-wait-request-react/static/js/2.063b9ebd.chunk.js",
+    "static/js/2.063b9ebd.chunk.js.map": "/using-loader-wait-request-react/static/js/2.063b9ebd.chunk.js.map",
+    "index.html": "/using-loader-wait-request-react/index.html",
+    "precache-manifest.6a15d065a22478478bf66bb9d19485c8.js": "/using-loader-wait-request-react/precache-manifest.6a15d065a22478478bf66bb9d19485c8.js",
+    "service-worker.js": "/using-loader-wait-request-react/service-worker.js",
+    "static/css/main.91ab2300.chunk.css.map": "/using-loader-wait-request-react/static/css/main.91ab2300.chunk.css.map",
+    "static/js/2.063b9ebd.chunk.js.LICENSE.txt": "/using-loader-wait-request-react/static/js/2.063b9ebd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f85fbe6f.js",
+    "static/js/2.063b9ebd.chunk.js",
+    "static/css/main.91ab2300.chunk.css",
+    "static/js/main.1f7cf521.chunk.js"
+  ]
+}
