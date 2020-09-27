@@ -8,6 +8,7 @@ const FormUserData = () => {
   const [showLoader, setShowLoader] = useState(false)
   const [username, setUsername] = useState('')
   const [hasError, setHasError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const [userData, setUserData] = useState({})
 
 
@@ -17,13 +18,21 @@ const FormUserData = () => {
     fetch(`https://api.github.com/users/${username}`)
         .then(res => res.json())
         .then(data => {
+          if(data.message === "Not Found") {
+            setErrorMessage('Nenhum usuário encontrado, recarrege a pagina')
+            setHasError(true)
+          }
           setUserData(data)
           setShowLoader(false)
         })
         .catch((err) => {
-          setHasError('Ooops... Deu alguma merda.')
+          setHasError(true)
           setShowLoader(false)
         })
+  }
+
+  if(hasError) {
+    throw new Error(errorMessage);
   }
 
   const isObjectEmpty = (myObject) => {
@@ -38,7 +47,6 @@ const FormUserData = () => {
         <button type="submit" className="btn-submit">Enviar</button>
       </form>
       {showLoader && <Loader/>}
-      {hasError && <p data-testid="error-message">{hasError}</p>}
       {isObjectEmpty(userData) && <UserData data={userData} />}
     </>
   );
